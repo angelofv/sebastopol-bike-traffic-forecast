@@ -1,0 +1,44 @@
+# Version Control
+.git
+.github
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Python Artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Tests & Coverage
+.pytest_cache/
+.coverage
+coverage.xml
+ruff_cache/
+.mypy_cache/
+
+# Data & Heavy Outputs
+data/**
+!data/01_raw/*
+mlruns/
+
+# Notebooks
+notebooks/
+*.ipynb
+
+# Environments & Dependencies
+.env
+*.venv
+.conda-env/
+
+# Logs
+*.log
+
+# Other Temporary Files
+*.swp
+*.tmp
+*.bak

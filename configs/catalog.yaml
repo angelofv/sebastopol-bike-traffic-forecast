@@ -1,0 +1,19 @@
+# Données brutes
+raw_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/raw_data.csv
+
+# Données pré-traitées
+processed_data:
+  type: pandas.ParquetDataset
+  filepath: data/02_processed/processed_data.parquet
+
+# Modèle entraîné
+model:
+  type: pickle.PickleDataset
+  filepath: data/03_models/model.pkl
+
+# Rapport / figure
+accuracy_plot:
+  type: matplotlib.MatplotlibDataset
+  filepath: data/04_reports/accuracy.png

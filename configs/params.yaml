@@ -1,0 +1,12 @@
+preprocessing:
+  dropna_columns:
+  - sepal length (cm)
+  - sepal width (cm)
+  - petal length (cm)
+  - petal width (cm)
+  - target
+modeling:
+  n_estimators: 100
+  target: target
+plotting:
+  target: target

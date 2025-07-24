@@ -1,0 +1,6 @@
+[run]
+omit =
+  src/config.py
+  src/run.py
+  */__init__.py
+  app/
