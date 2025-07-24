@@ -1,7 +1,7 @@
 # sebastopol-bike-traffic-forecast
 
 [![CI](https://github.com/angelofv/sebastopol-bike-traffic-forecast/actions/workflows/ci.yml/badge.svg)](https://github.com/angelofv/sebastopol-bike-traffic-forecast/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/angelofv/sebastopol-bike-traffic-forecast/graph/badge.svg?token=cmZNTp8ozX)](https://codecov.io/gh/angelofv/sebastopol-bike-traffic-forecast)
+[![codecov](https://codecov.io/gh/angelofv/sebastopol-bike-traffic-forecast/graph/badge.svg?token=cjznxoepks)](https://codecov.io/gh/angelofv/sebastopol-bike-traffic-forecast)
 
 ## One‑Line Elevator Pitch
 
