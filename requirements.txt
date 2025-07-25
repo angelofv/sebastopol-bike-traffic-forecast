@@ -3,6 +3,7 @@ jupyterlab
 matplotlib
 plotly
 shapely
+statsmodels
 notebook
 numpy
 pandas
