@@ -1,12 +1,12 @@
 # Données brutes
 raw_data:
-  type: pandas.CSVDataset
-  filepath: data/01_raw/raw_data.csv
+  type: pandas.ParquetDataset
+  filepath: data/01_raw/comptage-multimodal-comptages.parquet
 
 # Données pré-traitées
 processed_data:
   type: pandas.ParquetDataset
-  filepath: data/02_processed/processed_data.parquet
+  filepath: data/02_processed/comptage-velo-processed.parquet
 
 # Modèle entraîné
 model:
