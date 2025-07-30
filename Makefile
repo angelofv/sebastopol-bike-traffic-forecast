@@ -47,26 +47,15 @@ test:   ## PyTest + coverage
 ################################################################################
 .PHONY: local-infra local-pipeline local-serve
 
-local-infra: ## Start MLflow & Prefect locally
-	@echo "🚀  Launching MLflow & Prefect"
-	@python -m mlflow server \
-	  --backend-store-uri ./mlruns \
-	  --artifacts-destination ./mlruns \
-	  --serve-artifacts \
-	  --host 0.0.0.0 \
-	  --port $(MLFLOW_PORT) & 
-	@prefect server start \
-	  --host 0.0.0.0 \
-	  --port $(PREFECT_PORT) &
-	@echo -n "⏳ Waiting for MLflow & Prefect"
-	@until curl -s http://localhost:$(MLFLOW_PORT)/ >/dev/null 2>&1 \
-	  && curl -s http://localhost:$(PREFECT_PORT)/api/health >/dev/null 2>&1; do \
-		echo -n "."; \
-		sleep 1; \
-	done
-	@echo " ✔ All services are up!"
-	@printf "\n👉 MLflow UI:   http://localhost:$(MLFLOW_PORT)\n"
-	@printf "👉 Prefect UI:  http://localhost:$(PREFECT_PORT)\n\n"
+local-infra:  ## Start MLflow & Prefect locally
+	@echo "🚀  Launching MLflow & Prefect"; \
+	python -m mlflow server --backend-store-uri ./mlruns --serve-artifacts --host 0.0.0.0 --port $(MLFLOW_PORT) & \
+	python -m prefect server start --host 0.0.0.0 --port $(PREFECT_PORT) & \
+	echo -n "⏳ Waiting for MLflow & Prefect"; \
+	until curl -s http://localhost:$(MLFLOW_PORT)/ >/dev/null && curl -s http://localhost:$(PREFECT_PORT)/api/health >/dev/null; do printf "."; sleep 1; done; \
+	echo " ✔ All services are up!"; \
+	printf "\n👉 MLflow UI:   http://localhost:$(MLFLOW_PORT)\n"; \
+	printf "👉 Prefect UI:  http://localhost:$(PREFECT_PORT)\n\n"
 
 local-pipeline: ## Run pipeline locally (after local-infra)
 	@echo "▶️  Launching pipeline …"
@@ -76,7 +65,7 @@ local-pipeline: ## Run pipeline locally (after local-infra)
 
 local-serve:  ## Start Streamlit locally (after local-infra)
 	@echo "🚀  Starting Streamlit" ; \
-	streamlit run app/app.py --server.address=0.0.0.0 --server.port=$(APP_PORT) & \
+	python -m streamlit run app/app.py --server.address=0.0.0.0 --server.port=$(APP_PORT) & \
 	echo -n "   Waiting for Streamlit" ; \
 	until curl -s http://localhost:$(APP_PORT)/ >/dev/null 2>&1; do sleep 1; done ; \
 	echo " ✔ Streamlit is up" ; \

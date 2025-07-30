@@ -21,3 +21,4 @@ griffe
 kedro
 kedro-datasets
 streamlit
+-e .

@@ -57,9 +57,7 @@ st.markdown("---")
 @st.cache_resource
 def load_model():
     """Load the model from the MLflow Model Registry."""
-    tracking_uri = os.getenv(
-        "MLFLOW_REMOTE_URI", os.getenv("MLFLOW_TRACKING_URI", "http://localhost:5000")
-    )
+    tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "http://localhost:5000")
     # Load the model from the Model Registry
     mlflow.set_tracking_uri(tracking_uri)
     model_name = "IrisClassifier"

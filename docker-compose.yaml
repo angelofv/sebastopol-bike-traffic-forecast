@@ -73,7 +73,7 @@ services:
     volumes:
       - .:/opt/app
     environment:
-      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI:-http://mlflow:5000}
     depends_on:
       mlflow:
         condition: service_healthy
