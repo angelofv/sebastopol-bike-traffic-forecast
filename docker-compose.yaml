@@ -39,6 +39,8 @@ services:
       start_period: 5s
 
   pipeline:
+    image: sebastopol-bike-traffic-forecast:runtime
+    pull_policy: never
     build:
       context: .
       target: runtime
@@ -60,9 +62,8 @@ services:
         condition: service_healthy
 
   app:
-    build:
-      context: .
-      target: runtime
+    image: sebastopol-bike-traffic-forecast:runtime
+    pull_policy: never 
     working_dir: /opt/app
     command: ["streamlit", "run", "app/app.py",
               "--server.address=0.0.0.0",
