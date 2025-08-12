@@ -29,8 +29,8 @@ clean: ## Remove Python artifacts & caches
 	find . -type d -name "__pycache__" -delete
 	rm -rf .pytest_cache .ruff_cache .coverage tests/coverage.xml
 
-mlflow-clean: ## Delete local mlruns directory
-	rm -rf ./mlruns
+mlflow-clean: ## Delete local mlflow filestores
+	rm -rf ./mlruns ./mlartifacts
 
 lint:   ## Ruff lint
 	ruff check . --fix
