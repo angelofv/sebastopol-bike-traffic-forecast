@@ -15,6 +15,12 @@ Predict the next 24 hours of bicycle traffic on Boulevard Sébastopol—Paris�
 
 ---
 
+## 📎 Resources
+
+- 🗂️ **Notion project page**: https://dust-reminder-067.notion.site/sebastopol-bike-traffic-forecast-20b48bbeb1fb80aa8542cd2dc7587268
+
+---
+
 ## 📜 License
 
 Released under the **MIT License** – see [`LICENSE`](LICENSE) for details.
