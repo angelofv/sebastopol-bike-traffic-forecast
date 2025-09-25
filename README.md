@@ -5,7 +5,7 @@
 
 ## One‑Line Elevator Pitch
 
-Predict the next 24 hours of bicycle traffic on Boulevard Sébastopol, Paris’s busiest cycling corridor—using automated data ingestion, gap‑aware feature engineering, and an ensemble of statistical and machine‑learning models.
+Predict the next 24 hours of bicycle traffic on Boulevard Sébastopol, Paris’s busiest cycling corridor, using automated data ingestion, gap‑aware feature engineering, and an ensemble of statistical and machine‑learning models.
 
 ---
 
