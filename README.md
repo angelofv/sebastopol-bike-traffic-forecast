@@ -5,13 +5,13 @@
 
 ## One‑Line Elevator Pitch
 
-Predict the next 24 hours of bicycle traffic on Boulevard Sébastopol—Paris’s busiest cycling corridor—using automated data ingestion, gap‑aware feature engineering, and an ensemble of statistical and machine‑learning models.
+Predict the next 24 hours of bicycle traffic on Boulevard Sébastopol, Paris’s busiest cycling corridor—using automated data ingestion, gap‑aware feature engineering, and an ensemble of statistical and machine‑learning models.
 
 ---
 
 **Problem Statement**
 
-> Boulevard Sébastopol ranks among the highest‑volume bike routes in Paris, yet its traffic patterns are influenced by complex factors—daily and weekly seasonality, weather, infrastructure works, and special events. This project aims to experiment with different time‑series modeling techniques, handle significant data gaps, and build an end‑to‑end forecasting pipeline that delivers accurate 24‑hour traffic predictions for further exploration and learning.
+> Boulevard Sébastopol ranks among the highest‑volume bike routes in Paris, yet its traffic patterns are influenced by complex factors, daily and weekly seasonality, weather, infrastructure works, and special events. This project aims to experiment with different time‑series modeling techniques, handle significant data gaps, and build an end‑to‑end forecasting pipeline that delivers accurate 24‑hour traffic predictions for further exploration and learning.
 
 ---
 
